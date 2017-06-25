@@ -24,4 +24,4 @@ PATH=/home/john/.local/share/umake/bin:$PATH
 
 # My configurations:
 # should be required to install youcompleteme vim plugin.
-# env PYTHON_CONFIGURE_OPTS="--enable-shared" 
+export PYTHON_CONFIGURE_OPTS="--enable-shared"
