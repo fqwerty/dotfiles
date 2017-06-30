@@ -2,15 +2,18 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'scrooloose/nerdtree'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'altercation/vim-colors-solarized'
 "Plug 'vim-syntastic/syntastic'
-"Plug 'ervandew/supertab' "disabled since ycm already has tab completion
+Plug 'ervandew/supertab' "tab completion 
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
+Plug 'Raimondi/delimitMate' "close brackets automatically
 
 
 
@@ -38,3 +41,13 @@ colorscheme solarized
 "vim-airline config
 set laststatus=2
 let g:airline_theme='base16'
+
+
+"youcompleteme
+let g:enable_ycm_at_startup = 0 "disable youcompleteme
+
+
+"deoplete
+let g:deoplete#enable_at_startup = 1 " Use deoplete.
+set completeopt-=preview "disable preview
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete "enable omnicompletion for python"
