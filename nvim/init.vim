@@ -41,6 +41,9 @@ nnoremap tt :tabedit<Space>
 nnoremap tm :tabm<Space>
 nnoremap td :tabclose<CR>
 
+" make H and L not to move absolute top or bottom
+
+
 "###############################
 "#### PLUGIN CONFIGURATIONS ####
 "###############################
