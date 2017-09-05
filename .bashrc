@@ -117,16 +117,20 @@ if ! shopt -oq posix; then
 fi
 
 
+#===================================================================
+#===================================================================
 #========================= MY CONFIGURATIONS =======================
-#alias vim to neovim
-alias vim='nvim'
+#===================================================================
+#===================================================================
 
-#pyenv config
-#Define environment variable PYENV_ROOT to point to the path where repo is cloned
-export PYENV_ROOT="$HOME/.pyenv"
-#add $PYENV_ROOT/bin to your $PATH for access to the pyenv command-line utility
-export PATH="$PYENV_ROOT/bin:$PATH"
-#Add pyenv init to your shell
-eval "$(pyenv init -)"
-#solarized theme config
+#pyenv
+export PYENV_ROOT="$HOME/.pyenv" #Define environment variable PYENV_ROOT to point to the path where repo is cloned
+export PATH="$PYENV_ROOT/bin:$PATH" #add $PYENV_ROOT/bin to your $PATH for access to the pyenv command-line utility
+eval "$(pyenv init -)" #Add pyenv init to your shell
+
+#solarized theme 
 export TERM=screen-256color-bce
+
+
+stty -ixon #Turn off the binding of Ctrl+S so it can be used in vim to save files.
+alias vim='nvim' #alias vim to neovim

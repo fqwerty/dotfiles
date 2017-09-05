@@ -41,8 +41,12 @@ nnoremap tt :tabedit<Space>
 nnoremap tm :tabm<Space>
 nnoremap td :tabclose<CR>
 
-" make H and L not to move absolute top or bottom
+"save file using Ctrl+S
+nnoremap <c-s> :update<CR> 
+inoremap <c-s> <Esc>:update<CR> 
+vnoremap <c-s> <Esc>:update<CR> 
 
+" make H and L not to move absolute top or bottom
 
 "###############################
 "#### PLUGIN CONFIGURATIONS ####
@@ -55,6 +59,7 @@ source ~/.dotfiles/nvim/plugconfig.vim
 "### OTHER CONFIGURATIONS ####
 "#############################
 
+set mouse=n "enable mouse so you can change split window's width using mouse and also you can move to another split by clicking on it
 set autoindent  "automatically set indent of new line
 set smartindent
 set noswapfile "disable swap file:
@@ -65,3 +70,14 @@ set guifont=Monospace\ 14 "set font for gvim
 set undofile "tell vim to use an undo file
 set undodir=~/.vimundo/
 set relativenumber "Show relative line numbers
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+hi Normal ctermbg=none "transparent background
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
+"rename tmux window name to open file's name in vim
+"autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter * call system("tmux rename-window " . expand("%:t"))
+autocmd BufEnter,BufUnload * call system("tmux rename-window " . expand("%:t"))
+autocmd VimLeave * call system("tmux rename-window bash") "auto rename tmux window name when vim is closed
