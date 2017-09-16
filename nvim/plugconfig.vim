@@ -5,6 +5,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'} "autocomplete engin
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'equalsraf/neovim-gui-shim'
 "Plug 'altercation/vim-colors-solarized'
 Plug 'ervandew/supertab' "tab completion 
 Plug 'nathanaelkane/vim-indent-guides'

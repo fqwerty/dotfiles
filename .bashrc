@@ -134,3 +134,7 @@ export TERM=screen-256color-bce
 
 stty -ixon #Turn off the binding of Ctrl+S so it can be used in vim to save files.
 alias vim='nvim' #alias vim to neovim
+
+#go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin

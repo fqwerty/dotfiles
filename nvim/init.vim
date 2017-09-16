@@ -66,11 +66,12 @@ set noswapfile "disable swap file:
 set number "Display line numbers
 set ttyfast "faster redrawing
 set noshowmode "Don't show mode changes, because airline already does that.
-set guifont=Monospace\ 14 "set font for gvim
+"set guifont=Monospace\ 14 "set font for gvim
 set undofile "tell vim to use an undo file
 set undodir=~/.vimundo/
 set relativenumber "Show relative line numbers
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set guifont=Ubuntu\ Mono\ 13.5
 
 hi Normal ctermbg=none "transparent background
 
