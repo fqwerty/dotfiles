@@ -53,8 +53,6 @@ vnoremap <c-s> <Esc>:update<CR>
 "###############################
 source ~/.dotfiles/nvim/plugconfig.vim
 
-
-
 "#############################
 "### OTHER CONFIGURATIONS ####
 "#############################
